@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18153D1029FA138D0021D05C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18153D0F29FA138D0021D05C /* Task.swift */; };
 		185D5EA329F8C52D0059767E /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D5EA229F8C52D0059767E /* InputViewController.swift */; };
 		18D6658029F7792A00197E3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6657F29F7792A00197E3E /* AppDelegate.swift */; };
 		18D6658229F7792A00197E3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6658129F7792A00197E3E /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18153D0F29FA138D0021D05C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		185D5EA229F8C52D0059767E /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		18D6657C29F7792A00197E3E /* taskapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D6657F29F7792A00197E3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				18D6658129F7792A00197E3E /* SceneDelegate.swift */,
 				18D6658329F7792A00197E3E /* ViewController.swift */,
 				185D5EA229F8C52D0059767E /* InputViewController.swift */,
+				18153D0F29FA138D0021D05C /* Task.swift */,
 				18D6658529F7792A00197E3E /* Main.storyboard */,
 				18D6658829F7792B00197E3E /* Assets.xcassets */,
 				18D6658A29F7792B00197E3E /* LaunchScreen.storyboard */,
@@ -91,7 +94,6 @@
 				75FCD3785B0B6FA909BBA752 /* Pods-taskapp.debug.xcconfig */,
 				AF03823EB187F542C5B8EB12 /* Pods-taskapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,6 +214,7 @@
 			files = (
 				18D6658429F7792A00197E3E /* ViewController.swift in Sources */,
 				18D6658029F7792A00197E3E /* AppDelegate.swift in Sources */,
+				18153D1029FA138D0021D05C /* Task.swift in Sources */,
 				18D6658229F7792A00197E3E /* SceneDelegate.swift in Sources */,
 				185D5EA329F8C52D0059767E /* InputViewController.swift in Sources */,
 			);
