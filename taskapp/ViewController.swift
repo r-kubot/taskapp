@@ -8,10 +8,11 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
-//    Realmインスタンスの取得
+    //    Realmインスタンスの取得
     let realm = try! Realm()
     
 //    DB内のタスクが格納されるリスト。
@@ -24,10 +25,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.tableHeaderView = searchBar
         tableView.fillerRowHeight = UITableView.automaticDimension
         tableView.delegate = self
+        searchBar.delegate = self
         tableView.dataSource = self
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
 //    データの数（＝セルの数）を返す＝taskArrayの要素数を返す
@@ -43,7 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        再利用可能なcellを得る
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
 //        cellに値を設定する
         let task = taskArray[indexPath.row]
