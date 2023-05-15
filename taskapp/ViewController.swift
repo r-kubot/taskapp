@@ -30,7 +30,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         searchBar.delegate = self
         tableView.dataSource = self
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+
+//
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text?.isEmpty ?? true {
+           self.taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: true)
+        } else {
+            self.taskArray = try! Realm().objects(Task.self).where({$0.category == searchBar.text!})
+//           self.taskArray = try! Realm().objects(Task.self).filter(NSPredicate(format: "category == %@",  searchBar.text!))
+        }
+        self.tableView.reloadData()
     }
     
 //    データの数（＝セルの数）を返す＝taskArrayの要素数を返す
