@@ -16,12 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="00e-Qf-Vix">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="00e-Qf-Vix">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="Eap-vN-qqN">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="SXM-l1-IFN"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="64q-Mg-Rqd" detailTextLabel="qAQ-ms-NfN" style="IBUITableViewCellStyleSubtitle" id="HKa-f2-4LX">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="106" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HKa-f2-4LX" id="xRm-4L-73N">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -46,24 +53,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Eap-vN-qqN">
-                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SXM-l1-IFN"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Eap-vN-qqN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0oS-wA-gUH"/>
                             <constraint firstItem="00e-Qf-Vix" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1k5-D8-YVf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="00e-Qf-Vix" secondAttribute="bottom" id="BX4-tn-ukf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="00e-Qf-Vix" secondAttribute="trailing" id="Yy9-Oh-sfh"/>
-                            <constraint firstItem="Eap-vN-qqN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="blX-mx-82d"/>
                             <constraint firstItem="00e-Qf-Vix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gJi-Bn-7QM"/>
-                            <constraint firstItem="Eap-vN-qqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mJF-aS-dDc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i9f-YE-HCH">

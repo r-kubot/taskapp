@@ -25,8 +25,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tableView.tableHeaderView = searchBar
         tableView.fillerRowHeight = UITableView.automaticDimension
+        tableView.tableHeaderView = searchBar
         tableView.delegate = self
         searchBar.delegate = self
         tableView.dataSource = self
@@ -38,7 +38,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            self.taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: true)
         } else {
             self.taskArray = try! Realm().objects(Task.self).where({$0.category == searchBar.text!})
-//           self.taskArray = try! Realm().objects(Task.self).filter(NSPredicate(format: "category == %@",  searchBar.text!))
         }
         self.tableView.reloadData()
     }
